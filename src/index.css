@@ -12,6 +12,31 @@ body {
   background-color: #f1f1f1;
 }
 
+.search {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+  margin-block: 2rem 1.5rem;
+  margin-inline: auto;
+  width: 100%;
+  max-width: 1200px;
+  padding-inline: 1rem;
+}
+
+.search__label {
+  font-weight: 700;
+  font-size: 1.25rem;
+  color: #111;
+}
+
+.search__input {
+  width: 100%;
+  border: 1px solid #d1d5db;
+  border-radius: 0.5rem;
+  padding: 0.75rem 1rem;
+  font-size: 1rem;
+}
+
 .movie {
   margin-block: 2.5rem;
   margin-inline: auto;

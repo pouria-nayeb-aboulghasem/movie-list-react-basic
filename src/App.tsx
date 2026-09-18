@@ -1,12 +1,18 @@
 import { useState } from "react";
 import MovieList from "@/components/MovieList";
+import Search from "@/components/Search";
 import { getMovies } from "@/services";
 import type { MovieType } from "@/types";
 
 const App = () => {
-  const [movies] = useState<MovieType[]>(getMovies());
+  const [movies, setMovies] = useState<MovieType[]>(getMovies());
 
-  return <MovieList movies={movies} />;
+  return (
+    <>
+      <Search setMovies={setMovies} />
+      <MovieList movies={movies} />
+    </>
+  );
 };
 
 export default App;
