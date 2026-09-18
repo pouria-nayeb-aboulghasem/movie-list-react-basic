@@ -9,6 +9,7 @@ const App = () => {
 
   return (
     <>
+      {/* step 1: create search component */}
       <Search setMovies={setMovies} />
       <MovieList movies={movies} />
     </>

@@ -3,12 +3,15 @@ import { useState } from "react";
 import { getMovies } from "@/services";
 import { textFormat } from "@/utils";
 
+// step 3: define component props type
 type SearchProps = {
   setMovies: (movies: MovieType[]) => void;
 };
 
+// step 2: feed search component props
 const Search = ({ setMovies }: SearchProps) => {
-  const [query, setQuery] = useState("");
+  // step 5: define search component state
+  const [query, setQuery] = useState<string>("");
 
   function resetMovies(value: string): void {
     if (value === "") {
@@ -31,6 +34,7 @@ const Search = ({ setMovies }: SearchProps) => {
     setMovies(filteredMovies);
   }
 
+  // step 4: define UI
   return (
     <div className="search">
       <label className="search__label" htmlFor="movie-search">
@@ -40,7 +44,7 @@ const Search = ({ setMovies }: SearchProps) => {
       <input
         id="movie-search"
         className="search__input"
-        type="text"
+        type="search"
         value={query}
         onChange={(event) => handleSearch(event.target.value)}
         placeholder="Search by title and genre"
