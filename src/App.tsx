@@ -16,8 +16,8 @@ const App = () => {
       return;
     }
 
-    const filteredMovies = getMovies().filter((m) =>
-      textFormat(m.title).includes(textFormat(value)),
+    const filteredMovies = getMovies().filter((movie) =>
+      textFormat(movie.title).includes(textFormat(value)),
     );
 
     setMovies(filteredMovies);

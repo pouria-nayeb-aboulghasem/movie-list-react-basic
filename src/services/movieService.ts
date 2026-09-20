@@ -7,7 +7,12 @@ function getMovies(): MovieType[] {
 }
 
 // movie
-function getMovie(id: number): MovieType | undefined {
+function getMovie(id: string | undefined): MovieType | undefined {
+  if (typeof id !== "undefined") {
+    const uId = parseInt(id);
+    return movies.find((m) => m.id === uId);
+  }
+
   return movies.find((m) => m.id === id);
 }
 

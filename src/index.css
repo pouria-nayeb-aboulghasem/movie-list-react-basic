@@ -94,6 +94,40 @@ body {
   color: #333;
 }
 
+.container {
+  margin-block: 2rem 1.5rem;
+  margin-inline: auto;
+  width: 100%;
+  max-width: 1200px;
+  padding-inline: 1rem;
+}
+
+.back {
+  text-decoration: none;
+  display: inline-block;
+  margin-bottom: 1rem;
+}
+
+.item {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+
+.item__list {
+  display: flex;
+  gap: 0.5rem;
+  margin-block: 0.5rem;
+}
+
+.item__list li {
+  padding: 0.25rem 0.5rem;
+  background-color: gray;
+  color: #f1f1f1;
+  border-radius: 0.5rem;
+  font-size: 0.75rem;
+}
+
 @media screen and (min-width: 2048px) {
   body {
     zoom: 1.2;
@@ -109,6 +143,15 @@ body {
 @media screen and (max-width: 670px) {
   .movie__list {
     grid-template-columns: 1fr;
+  }
+
+  .item {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .item__list {
+    justify-content: center;
   }
 }
 
