@@ -12,6 +12,10 @@ body {
   background-color: #f1f1f1;
 }
 
+a {
+  text-decoration: none;
+}
+
 .search {
   display: flex;
   flex-direction: column;

@@ -1,8 +1,7 @@
 import { getMovie } from "@/services/movieService";
 import type { MovieType } from "@/types";
 import { useState } from "react";
-import { useParams } from "react-router-dom";
-import { Link } from "react-router-dom";
+import { useParams, Link } from "react-router-dom";
 
 type MovieParams = {
   id: string | undefined;
