@@ -2,6 +2,7 @@ import { getMovie } from "@/services/movieService";
 import type { MovieType } from "@/types";
 import { useState } from "react";
 import { useParams, Link } from "react-router-dom";
+import NotFound from "./NotFound";
 
 type MovieParams = {
   id: string | undefined;
@@ -10,6 +11,10 @@ type MovieParams = {
 function Movie() {
   const { id } = useParams<MovieParams>();
   const [movie] = useState<MovieType | undefined>(getMovie(id));
+
+  if (movie === null || movie === undefined) {
+    return <NotFound />;
+  }
 
   return (
     <div className="container">
