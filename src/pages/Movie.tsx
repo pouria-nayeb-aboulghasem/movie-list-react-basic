@@ -1,8 +1,8 @@
+import NotFound from "@/components/NotFound";
 import { getMovie } from "@/services/movieService";
 import type { MovieType } from "@/types";
 import { useState } from "react";
 import { useParams, Link } from "react-router-dom";
-import NotFound from "./NotFound";
 
 type MovieParams = {
   id: string | undefined;

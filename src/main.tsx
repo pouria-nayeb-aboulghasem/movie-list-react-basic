@@ -4,6 +4,7 @@ import "@/index.css";
 import App from "@/App";
 import { BrowserRouter, Route, Routes } from "react-router-dom";
 import Movie from "./pages/Movie";
+import NotFound from "./components/NotFound";
 
 createRoot(document.getElementById("root")!).render(
   <StrictMode>
@@ -11,6 +12,7 @@ createRoot(document.getElementById("root")!).render(
       <Routes>
         <Route path="/" element={<App />} />
         <Route path="/movies/:id" element={<Movie />} />
+        <Route path="*" element={<NotFound />} />
       </Routes>
     </BrowserRouter>
   </StrictMode>,
