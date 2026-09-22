@@ -13,7 +13,7 @@ function getMovie(id: string | undefined): MovieType | undefined {
     return movies.find((m) => m.id === uId);
   }
 
-  return movies.find((m) => m.id === id);
+  return undefined;
 }
 
 export { getMovies, getMovie };

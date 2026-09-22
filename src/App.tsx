@@ -16,11 +16,11 @@ const App = () => {
       return;
     }
 
-    const filteredMovies = getMovies().filter((movie) =>
-      textFormat(movie.title).includes(textFormat(value)),
+    setMovies(
+      getMovies().filter((movie) =>
+        textFormat(movie.title).includes(textFormat(value)),
+      ),
     );
-
-    setMovies(filteredMovies);
   };
 
   return (
